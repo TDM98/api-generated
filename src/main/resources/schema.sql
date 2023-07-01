@@ -1,13 +1,13 @@
-create table tbl_user (
-id BIGINT AUTO_INCREMENT PRIMARY KEY,
-hp INT DEFAULT NULL,
-stamina INT DEFAULT NULL,
-atk INT DEFAULT NULL,
-def INT DEFAULT NULL,
-agi INT DEFAULT NULL
+DROP TABLE IF EXISTS books;
+
+CREATE TABLE books (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,
+  price INTEGER NOT NULL,
+  author VARCHAR(250) DEFAULT NULL
 );
 
-INSERT INTO 
-tbl_user (hp, stamina, atk, def, agi)
-VALUES
-('1', '2', '54', '543', '478');
+INSERT INTO books (name, price, author) VALUES
+  ('Aliko', 12, 'Billionaire Industrialist'),
+  ('Bill', 14, 'Billionaire Tech Entrepreneur'),
+  ('Folrunsho', 42, 'Billionaire Oil Magnate');
